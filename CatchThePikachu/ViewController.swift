@@ -9,12 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var score = 0
-    var timer = Timer()
-    var counter = 0
-    var pikachuArray = [UIImageView]()
-    var hideTimer = Timer()
-    var highScore = 0
+    var score           = Int()
+    var timer           = Timer()
+    var counter         = Int()
+    var pikachuArray    = [UIImageView]()
+    var hideTimer       = Timer()
+    var highScore       = Int()
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -172,7 +172,7 @@ class ViewController: UIViewController {
             let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
             let replay = UIAlertAction(title: "Play Again!", style: UIAlertAction.Style.default) { UIAlertAction in
                
-                // Replay function
+                // Replay function in clousure
                 self.score = 0
                 self.scoreLabel.text = "Score: \(self.score)"
                 self.counter = 10
